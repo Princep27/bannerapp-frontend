@@ -1,12 +1,14 @@
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Banner from './Banner';
 import Dashboard from './Dashboard';
 
 function App() {
   return (
     <HashRouter>
-      <Route path="/" component={Banner} exact />
-      <Route path="/dashboard" component={Dashboard} exact />
+      <Routes>
+        <Route path="/" element={<Banner />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </HashRouter>
   );
 }
