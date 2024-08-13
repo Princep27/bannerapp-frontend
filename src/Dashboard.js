@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchBannerData = async () => {
             try {
-                const response = await axios.get('http://localhost:9000/dashboard');
+                const response = await axios.get('http://bannerappserver-production.up.railway.app/dashboard');
                 const { description, url, duration, visibility } = response.data;
                 console.log(response.data);
                 setDescription(description || '');
@@ -34,7 +34,7 @@ const Dashboard = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.put('http://localhost:9000/dashboard', {
+            const response = await axios.put('http://bannerappserver-production.up.railway.app/dashboard', {
                 description,
                 link,
                 duration: seconds,
