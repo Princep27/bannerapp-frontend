@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Banner from './Banner';
 import Dashboard from './Dashboard';
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Banner} />
         <Route path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
