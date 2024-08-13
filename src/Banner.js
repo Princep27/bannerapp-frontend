@@ -14,7 +14,7 @@ const Banner = () => {
 
     // Effect to establish socket.io connection when component mounts
     useEffect(() => {
-        const socket = io('http://localhost:9000');
+        const socket = io('http://bannerappserver-production.up.railway.app');
         socketRef.current = socket;
 
         socket.on('initialData', (data) => {
